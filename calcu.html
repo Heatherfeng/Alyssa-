@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcu</title>
+    <link rel="stylesheet" href="calcu.css">
+</head>
+<style>
+body{
+    background: linear-gradient(to right,black,deeppink);
+}
+.pa1{
+    width: 165px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-color: blue;
+}
+.container{
+    box-shadow: 0px 6px 2px 0px rgba(11, 106, 238, 0.45),0px 4px 6px 2px rgba(6, 231, 164, 0.75);
+ 
+    text-align: center;
+    margin-top: 90px;
+height: 340px;
+width: 190px;
+border-radius: 10px;
+border: 2px solid rgb(131, 253, 10);
+}
+input{
+    font-weight: 600;
+    background-color: cyan;
+    border-color: deeppink;
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+</style>
+<body>
+   <div class="container">
+    <input type="text" id="box" class="pa1" text="display">
+    <div>
+    <input type="button" value="9" onclick="mykeyboard('9')">
+    <input type="button" value="8" onclick="mykeyboard('8')">
+    <input type="button" value="7" onclick="mykeyboard('7')">
+    <input type="button" value="6" onclick="mykeyboard('6')">
+    </div>
+    <div>
+        <input type="button" value="5" onclick="mykeyboard('5')">
+        <input type="button" value="4" onclick="mykeyboard('4')">
+        <input type="button" value="3" onclick="mykeyboard('3')">
+        <input type="button" value="2" onclick="mykeyboard('2')">
+    </div>
+    <div>
+        <input type="button" value="1" onclick="mykeyboard('1')">
+        <input type="button" value="0" onclick="mykeyboard('0')">
+        <input type="button" value="/" onclick="mykeyboard('/')">
+        <input type="button" value="*" onclick="mykeyboard('*')">
+    </div>
+    <div>
+        <input type="button" value="%" onclick="mykeyboard('%')">
+        <input type="button" value="-" onclick="mykeyboard('-')">
+        <input type="button" value="+" onclick="mykeyboard('+')">
+        <input type="button" value="^" onclick="mykeyboard('^')">
+      
+       
+    </div>
+    <div>
+        <input type="button" value="." onclick="mykeyboard('.')">
+        <input type="button" value="c" onclick="mykeyboard('c')">
+        <input type="button" value="del" onclick="mykeyboard('del')">
+        <input type="button" value="=" onclick="mykeyboard('=')">
+    </div>
+   </div> 
+<script type="text/javascript">
+let keyboard='';
+const sum2 =
+document.getElementById('box').innerHTML
+function mykeyboard(key){
+    if(key ==='del'){
+        box.value =
+        box.value.slice(0,-1);
+    }
+    else if(key ==='^'){
+        box.value +='**';
+    }
+    else if(key ==='%'){
+        box.value += '100';
+    }
+    else if(key ==='='){
+        box.value= eval(box.value);
+
+    }
+    else if(key ==='c'){
+    box.value ='';
+    }
+    else if(key ===' ÷'){
+        box.value +='/'
+    }
+else{
+    box.value += key;
+}
+}
+</script>
+</body>
+</html>
